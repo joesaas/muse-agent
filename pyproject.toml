@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "muse-agent"
+version = "0.1.0"
+description = "A modular, Muse-inspired super agent — design-first, minimal runnable core, stdlib only."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "joesaas" }]
+dependencies = []
+
+[project.scripts]
+muse-agent = "muse_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+muse_agent = ["templates/**/*.md"]
